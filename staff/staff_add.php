@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ろくまる農園2022</title>
+        <title>ろくまる農園</title>
     </head>
     <body>
         スタッフ追加<br />
