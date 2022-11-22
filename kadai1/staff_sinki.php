@@ -7,8 +7,19 @@
     <body>
         スタッフ追加<br />
         <br />
-        <form method="post" action="staff_add_check.php">
+        <form method="post" action="staff_sinki_check.php">
         スタッフ名を入力してください。<br />
+        <form method="post" action="staff_sinki_check.php">
+        ふりがなを入力してください。<br />
+        <form method="post" action="staff_sinki_check.php">
+        郵便番号を入力してください。<br />
+        <form method="post" action="staff_sinki_check.php">
+        住所を入力してください。<br />
+        <form method="post" action="staff_sinki_check.php">
+        電話番号を入力してください。<br />
+        <form method="post" action="staff_sinki_check.php">
+        E-メールアドレスを入力してください。<br />
+        
         <input type="text" name="name"  style="width:200px"><br />
         パスワードを入力してください。<br />
         <input type="password" name="pass" style="width:100px"><br />

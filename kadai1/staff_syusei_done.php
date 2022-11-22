@@ -41,6 +41,6 @@
 
        修正しました。<br/>
        <br/>
-      <a href ="staff_list.php">戻る</a>
+      <a href ="staff_togo.php">戻る</a>
     </body>
 </html>

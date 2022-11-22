@@ -40,7 +40,7 @@
     <?php print $staff_code; ?>
     <br />
     <br />
-    <form method="post" action="staff_edit_check.php">
+    <form method="post" action="staff_syusei_check.php">
         <input type="hidden" name="code" value="<?= $staff_code; ?>">
         スタッフ名<br />
         <input type="text" name="name" style="width:200px" value="<?php print $staff_name; ?>"><br />
