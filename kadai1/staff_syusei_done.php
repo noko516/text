@@ -22,7 +22,7 @@
        $dbh = new PDO($dsn, $user, $password);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='UPDATE mst_staff SET name=?, password=? WHERE code=?';
+       $sql ='UPDATE kadai1 SET name=?, password=? WHERE code=?';
        $stmt = $dbh->prepare($sql);
        $data[] = $staff_name;
        $data[] = $staff_pass;
