@@ -44,11 +44,18 @@
         <input type="hidden" name="code" value="<?= $staff_code; ?>">
         スタッフ名<br />
         <input type="text" name="name" style="width:200px" value="<?php print $staff_name; ?>"><br />
-        パスワードを入力してください<br />
-        <input type="password" name="pass" style="width:100px"><br />
-        パスワードをもう一度入力してください<br />
-        <input type="password" name="pass2" style="width:100px"><br />
+        ふりがな<br />
+        <input type="text" name="name2" style="width:200px"><br />
+        郵便番号<br />
+        <input type="number" name="bango" style="width:100px"><br />
+        住所<br />
+        <input type="text"name="zyusyo" style="width:200px"><br />
+        電話番号<br />
+        <input type="number" name="tel" style="width:200px"><br />
+        E-メールアドレス<br />
+        <input type="email" name="mail" style="width:200px"><br />
         <br />
+
         <button type="button" onclick="history.back()">戻る</button>
         <button type="submit">OK</button>
     </form>

@@ -28,14 +28,17 @@
         
        $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
-       $password = '';
-       $dbh = new PDO($dsn, $user, $password);
+       $dbh = new PDO($dsn, $user);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
        $sql ='UPDATE kadai1 SET name=?, password=? WHERE code=?';
        $stmt = $dbh->prepare($sql);
        $data[] = $staff_name;
-       $data[] = $staff_pass;
+       $data[] = $staff_name2;
+       $data[] = $staff_bango;
+       $data[] =  $staff_zyusyo;
+       $data[] = $staff_tel;
+       $data[] =  $staff_mail;
        $data[] = $staff_code;
        $stmt->execute($data);
 

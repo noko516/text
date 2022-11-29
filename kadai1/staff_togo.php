@@ -10,8 +10,7 @@
        try{
         $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
-       $password = '';
-       $dbh = new PDO($dsn, $user, $password);
+       $dbh = new PDO($dsn, $user);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
        
        $sql = 'SELECT code,name FROM mst_staff WHERE 1';

@@ -10,8 +10,11 @@
         
         $staff_code=$_POST['code'];
         $staff_name=$_POST['name'];
-        $staff_pass=$_POST['pass'];
-        $staff_pass2=$_POST['pass2'];
+        $staff_name2=$_POST['name2'];
+        $staff_bango=$_POST['bango'];
+        $staff_zyusyo=$_POST['zyusyo'];
+        $staff_tel=$_POST['tel'];
+        $staff_mail=$_POST['mail'];
 
         $staff_name= htmlspecialchars($staff_name,ENT_QUOTES,'UTF-8');
         $staff_pass= htmlspecialchars($staff_pass,ENT_QUOTES,'UTF-8');

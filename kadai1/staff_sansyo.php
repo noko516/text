@@ -15,7 +15,7 @@
   
         $dsn='mysql:dbname=shop;host=localhost;cherset=utf8';
         $user='root';
-        $password ='';
+
         $dbh=new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
@@ -42,6 +42,9 @@
     <br/>
     スタッフ名<br/>
     <?php print $staff_name;?>
+    <br/>
+    ふりがな<br/>
+    <?php print $staff_name2;?>
     <br/>
     <br/>
     <form>

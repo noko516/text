@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ろくまる農園</title>
+        <title>課題１</title>
     </head>
     <body>
         スタッフが選択されていません。<br/>

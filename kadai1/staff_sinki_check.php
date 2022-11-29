@@ -89,17 +89,7 @@
             print'<br />';
         }
 
-        if($staff_pass=='')
-        {
-            print'パスワードが入力されてません<br />';
-        }
-
-        if($staff_pass!=$staff_pass2)
-        {
-        print'パスワードが一致しません<br />';
-        }
-
-        if($staff_name==''||$staff_pass==''||$staff_pass!=$staff_pass2)
+        if($staff_name==''||$staff_name2==''||$staff_bango==''||$staff_zyusyo==''||$staff_tel==''||$staff_mail=='')
        {
         print'<form>';
         print'<input type="button" onclick="history.back()" value="戻る">';
@@ -107,10 +97,13 @@
        }
        else
        {
-        $staff_pass = md5($staff_pass);
         print'<form method="post"action="staff_sinki_done.php">';
         print'<input type="hidden" name="name" value="' .$staff_name.'">';
-        print'<input type="hidden" name="pass" value="'.$staff_pass.'">';
+        print'<input type="hidden" name="name2" value="'.$staff_name2.'">';
+        print'<input type="hidden" name="bango" value="' .$staff_bango.'">';
+        print'<input type="hidden" name="zyusyo" value="' .$staff_zyusyo.'">';
+        print'<input type="hidden" name="tel" value="' .$staff_tel.'">';
+        print'<input type="hidden" name="mail" value="' .$staff_mail.'">';
         print '<br />';
         print '<input type="button" onclick="history.back()" value="戻る">';
         print '<input type="submit" value="OK">';   
