@@ -22,7 +22,7 @@
        
        print 'スタッフ一覧<br /><br />';
 
-       print '<form method="post"action="staff_branch.php">';
+       print '<form method="post"action="staff_bran.php">';
        while(true)
        {
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
@@ -33,10 +33,10 @@
         print $rec['name'];
         print'<br />';
        }
-       print '<input type="submit" name="disp" value="参照">';
-       print '<input type="submit" name="add" value="追加">';
-       print '<input type="submit" name="edit" value="修正">';
-       print '<input type="submit" name="delete" value="削除">';
+       print '<input type="submit" name="sansyo" value="参照">';
+       print '<input type="submit" name="sinki" value="追加">';
+       print '<input type="submit" name="syusei" value="修正">';
+       print '<input type="submit" name="sakuzyo" value="削除">';
        print '</from>';
        }
        catch(Exception $e){
