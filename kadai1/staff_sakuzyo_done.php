@@ -13,11 +13,10 @@
         
        $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
-       $password = '';
-       $dbh = new PDO($dsn, $user, $password);
+       $dbh = new PDO($dsn, $user);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='DELETE FROM kadai1 WHERE code=?';
+       $sql ='DELETE FROM kozin WHERE ID=?';
        $stmt = $dbh->prepare($sql);
 
        $data[] = $staff_code;

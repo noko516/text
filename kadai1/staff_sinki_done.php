@@ -30,7 +30,7 @@
        $dbh = new PDO($dsn, $user, );
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='INSERT INTO kadai1(name,name2,bango,zyusyo,tel,mail) VALUES(?,?,?,?,?,?)';
+       $sql ='INSERT INTO kozin(simei,hurigana,yubin,zyusyo,denwa,email) VALUES(?,?,?,?,?,?)';
        $stmt = $dbh->prepare($sql);
        $data[] = $staff_name;
        $data[] = $staff_name2;

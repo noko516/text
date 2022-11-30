@@ -20,13 +20,13 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT name FROM kadai1 WHERE code =?';
+        $sql = 'SELECT simei FROM kozin WHERE ID =?';
         $stmt = $dbh->prepare($sql);
         $data[] = $staff_code;
         $stmt->execute($data);
 
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-        $staff_name = $rec['name'];
+        $staff_name = $rec['simei'];
         $dbh = null;
     } catch (Exception $e) {
         print 'ただいま障害により大変ご迷惑をお掛けしています。';

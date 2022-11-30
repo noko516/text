@@ -13,7 +13,7 @@
        $dbh = new PDO($dsn, $user);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
        
-       $sql = 'SELECT code,name FROM mst_staff WHERE 1';
+       $sql = 'SELECT ID,simei FROM kozin WHERE 1';
        $stmt = $dbh->prepare($sql);
        $stmt->execute();
 
@@ -28,8 +28,8 @@
         if($rec==false){
               break;
         }
-        print '<input type="radio"name="staffcode"value="'.$rec['code'].'">';
-        print $rec['name'];
+        print '<input type="radio"name="staffcode"value="'.$rec['ID'].'">';
+        print $rec['simei'];
         print'<br />';
        }
        print '<input type="submit" name="sansyo" value="参照">';
