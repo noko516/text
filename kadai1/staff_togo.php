@@ -5,7 +5,7 @@
         <title>課題１</title>
     </head>
     <body>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="staff_togo.css">
        <?php 
        try{
         $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
@@ -34,13 +34,14 @@
         print $rec['hurigana'];
         print'<br />';
        }
-       echo "<div class=ao>";
-       print  '<input type="submit" name="sansyo" value="参照">';
-       print '<input type="submit" name="sinki" value="追加">';
-       print '<input type="submit" name="syusei" value="修正">';
-       print '<input type="submit" name="sakuzyo" value="削除">';
+
+      
+       echo  '<input type="submit" name="sansyo" value="参照">';
+       echo  '<input type="submit" name="sinki" value="追加">';
+       echo  '<input type="submit" name="syusei" value="修正">';
+       echo  '<input type="submit" name="sakuzyo" value="削除">';
        print '</from>';
-       echo "</div>";
+      
        }
        catch(Exception $e){
          print 'ただいま障害により大変ご迷惑をお掛けしております。';
