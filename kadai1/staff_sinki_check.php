@@ -8,11 +8,11 @@
 
         <?php 
         
-        $staff_name=$_POST['name'];
-        $staff_name2=$_POST['name2'];
-        $staff_bango=$_POST['bango'];
-        $staff_zyusyo=$_POST['zyusyo'];
-        $staff_tel=$_POST['tel'];
+        $staff_name =$_POST['name'];
+        $staff_name2 =$_POST['name2'];
+        $staff_bango =$_POST['bango'];
+        $staff_zyusyo =$_POST['zyusyo'];
+        $staff_tel =$_POST['tel'];
         $staff_mail=$_POST['mail'];
 
 

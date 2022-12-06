@@ -13,7 +13,7 @@
        $dbh = new PDO($dsn, $user);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
        
-       $sql = 'SELECT ID,simei FROM kozin WHERE 1';
+       $sql = 'SELECT ID, simei, hurigana FROM kozin WHERE 1';
        $stmt = $dbh->prepare($sql);
        $stmt->execute();
 
@@ -29,7 +29,9 @@
               break;
         }
         print '<input type="radio"name="staffcode"value="'.$rec['ID'].'">';
+        print $rec['ID'];
         print $rec['simei'];
+        print $rec['hurigana'];
         print'<br />';
        }
        echo "<div class=ao>";

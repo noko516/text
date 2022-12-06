@@ -19,7 +19,7 @@
         $dbh = new PDO($dsn, $user);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT simei, hurigana FROM kozin WHERE ID =?';
+        $sql = 'SELECT simei, hurigana, yubin, zyusyo, denwa, email FROM kozin WHERE ID =? ';
         $stmt = $dbh->prepare($sql);
         $data[] = $staff_code;
         $stmt->execute($data);
@@ -27,9 +27,14 @@
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
         $staff_name = $rec['simei'];
         $staff_name2 = $rec['hurigana'];
+        $staff_bango = $rec['yubin'];
+        $staff_zyusyo = $rec['zyusyo'];
+        $staff_tel = $rec['denwa'];
+        $staff_mail = $rec['email'];
         $dbh = null;
     } catch (Exception $e) {
         print 'ただいま障害により大変ご迷惑をお掛けしています。';
+        print $e->getMessage();
         exit();
     }
     ?>
@@ -43,6 +48,18 @@
     <br/>
     ふりがな<br/>
     <?php print $staff_name2;?>
+    <br/>
+    郵便番号<br/>
+    <?php print $staff_bango;?>
+    <br/>
+    住所<br/>
+    <?php print $staff_zyusyo;?>
+    <br/>
+    電話番号<br/>
+    <?php print $staff_tel;?>
+    <br/>
+    E-メールアドレス<br/>
+    <?php print $staff_mail;?>
     <br/>
     <br/>
     <form>
