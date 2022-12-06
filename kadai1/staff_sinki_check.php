@@ -97,7 +97,7 @@
        }
        else
        {
-        print'<form method="post"action="staff_sinki_done.php">';
+        print'<form method="post" action="staff_sinki_done.php">';
         print'<input type="hidden" name="name" value="' .$staff_name.'">';
         print'<input type="hidden" name="name2" value="'.$staff_name2.'">';
         print'<input type="hidden" name="bango" value="' .$staff_bango.'">';
