@@ -30,9 +30,9 @@
         }
         echo "<div class=kakoi>";
         print '<input type="radio"name="staffcode"value="'.$rec['ID'].'">' ."\n";
-        print $rec['ID'];
-        print $rec['simei'];
-        print $rec['hurigana'];
+        print $rec['ID']."\n";
+        print $rec['simei']."\n";
+        print $rec['hurigana']."\n";
         print'<br />';
         echo "</div>";
        }

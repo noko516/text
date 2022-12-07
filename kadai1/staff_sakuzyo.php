@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>課題１</title>
+        <link href="staff_sakuzyo.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         

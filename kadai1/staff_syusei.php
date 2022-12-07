@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>課題1</title>
+    <link href="staff_syusei.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

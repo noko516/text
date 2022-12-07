@@ -1,18 +1,26 @@
 @charset "utf-8";
 
-.kakoi{
+
+body {
+     background-color: #ffffe0;
+     }
 
 
 
+     
+  .kakoi{
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      border: solid 3px #000000;
+      background-color: #e0ffff;
+  }
 
-
-
-
-
-}
-
-.ao{
+  .ao{padding: 0.5em 1em;
+     margin: 2em 0;
+     border-bottom: solid 6px #aac5de;
+     border-radius: 9px;
      margin-top: 50px;
      color:#6e4a55;
      background-color:#bbdbf3;
-}
+   }

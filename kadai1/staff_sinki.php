@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>課題１</title>
+        <link href="staff_sinki.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         スタッフ追加<br />

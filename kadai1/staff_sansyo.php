@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>課題1</title>
+    <link href="staff_sansyo.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -38,6 +39,7 @@
         exit();
     }
     ?>
+    <div class="kakoi">
     スタッフ情報参照<br />
     <br/>
     スタッフコード<br/>
@@ -62,6 +64,7 @@
     <?php print $staff_mail;?>
     <br/>
     <br/>
+    </div>
     <form>
     <button type="button" onclick="history.back()">戻る</button>
  
