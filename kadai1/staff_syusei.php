@@ -34,6 +34,9 @@
     }
     ?>
 
+  <table>
+      <tbody>
+         
     スタッフ修正<br />
     <br />
     スタッフコード<br />
@@ -42,8 +45,7 @@
     <br />
     <form method="post" action="staff_syusei_check.php">
         <input type="hidden" name="code" value="<?= $staff_code; ?>">
-        <table>
-        <tbody>
+
 
         <tr>
         <th>スタッフ名</th><td><input type="text" name="name" style="width:200px"value="<?php print $staff_name; ?>"></td>
