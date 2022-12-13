@@ -35,6 +35,7 @@
     }
     ?>
 
+    <div class="kakoi">
     スタッフ削除<br />
     <br/>
     スタッフコード<br/>
@@ -43,13 +44,15 @@
     スタッフ名<br/>
     <?php print $staff_name;?>
     <br/>
-    このスタッフを削除してもよろしいですか？<br/>
+    このスタッフを<div class="aka">削除</div>してもよろしいですか？<br/>
     <br/>
+   </div>
     <form method="post"action="staff_sakuzyo_done.php">
     <input type="hidden" name="code" value="<?php print $staff_code;?>">
    
     <input type="button" onclick="history.back()" value="戻る">
     <input type="submit"  value="OK">
+    
 </form>
     </body>
 </html>

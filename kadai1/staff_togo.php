@@ -22,20 +22,31 @@
        print 'スタッフ一覧<br /><br />';
 
        print '<form method="post"action="staff_bran.php">' ."\n";
+       echo "<table>";
+       echo "<tbody>";
+       echo "<tr>";
+       echo "<th></th>";
+       echo "<th>ID</th>";
+       echo "<th>名前</th>";
+       echo "<th>ふりがな</th>";
+       echo "</tr>";
        while(true)
        {
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
         if($rec==false){
               break;
         }
-        echo "<div class=kakoi>";
-        print '<input type="radio"name="staffcode"value="'.$rec['ID'].'">' ."\n";
-        print $rec['ID']."\n";
-        print $rec['simei']."\n";
-        print $rec['hurigana']."\n";
+        echo "<tr>";
+        print '<td> <input type="radio"name="staffcode"value="'.$rec['ID'].'"></td>' ."\n";
+        print "<td>" .$rec['ID']."</td>\n";
+        print "<td>" .$rec['simei']."</td>\n";
+        print "<td>" .$rec['hurigana']."</td>\n";
         print'<br />';
-        echo "</div>";
+        echo "</tr>";
+        
        }
+       echo "</tbody>";
+       echo "</table>";
 
        echo  '<input class="ao" type="submit" name="sansyo" value="参照">' ."\n";
        echo  '<input class="ao" type="submit" name="sinki" value="追加">' ."\n";

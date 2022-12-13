@@ -3,3 +3,17 @@
 body {
     background-color: #ffffe0;
     }
+
+
+   
+        tr:nth-child(odd) {
+         background-color:  #ddd;  
+     }
+   
+        td {
+           padding: 5px 10px;
+       }
+      
+       table {
+          border-collapse:  collapse; 
+       }
