@@ -4,6 +4,10 @@ body {
     background-color: #ffffe0;
     }
 
+    table {
+        border-collapse:  collapse; 
+     }
+     
     tr:nth-child(odd) {
      background-color:  #ddd;  
  }
@@ -11,7 +15,4 @@ body {
     td {
        padding: 5px 10px;
    }
-  
-   table {
-      border-collapse:  collapse; 
-   }
+

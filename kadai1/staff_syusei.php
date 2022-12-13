@@ -44,24 +44,31 @@
         <input type="hidden" name="code" value="<?= $staff_code; ?>">
         <table>
         <tbody>
+
         <tr>
-        <th>スタッフ名</th><td><input type="text" name="name" style="width:200px" value="<?php print $staff_name; ?>"></td>
+        <th>スタッフ名</th><td><input type="text" name="name" style="width:200px"value="<?php print $staff_name; ?>"></td>
         </tr>
+
         <tr>
         <th>ふりがな</th><td><input type="text" name="name2" style="width:200px"></td>
         </tr>
+
         <tr>
         <th>郵便番号</th><td><input type="number" name="bango" style="width:100px"></td>
         </tr>
+
         <tr>
         <th>住所</th><td><input type="text"name="zyusyo" style="width:200px"></td>
         </tr>
+
         <tr>
         <th>電話番号</th><td><input type="number" name="tel" style="width:200px"></td>
        </tr>
+
         <tr>
         <th>E-メールアドレス</th><td><input type="email" name="mail" style="width:200px"></td>
         </tr>
+
        </tbody>
        </table> 
        <br />
