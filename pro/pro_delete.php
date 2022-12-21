@@ -38,10 +38,10 @@
     商品削除<br />
     <br/>
     商品コード<br/>
-    <?php print $staff_code;?>
+    <?php print $pro_code;?>
     <br/>
     商品名<br/>
-    <?php print $staff_name;?>
+    <?php print $pro_name;?>
     <br/>
     この商品を削除してもよろしいですか？<br/>
     <br/>

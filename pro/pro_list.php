@@ -8,9 +8,10 @@
        <?php 
        
        try{
-        $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
+       $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
        $price = '';
+       $dbh = new PDO($dsn, $user, $price);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
        
        $sql = 'SELECT code,name,price FROM mst_product WHERE 1';
