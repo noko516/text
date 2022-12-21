@@ -28,7 +28,7 @@
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
         $pro_name = $rec['name'];
         $pro_price = $rec['price'];
-        $pro_gazou_name_old = $_POST['gazou'];
+        $pro_gazou_name_old = $rec['gazou'];
         $dbh = null;
 
         

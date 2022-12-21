@@ -16,6 +16,8 @@
         $pro_code =htmlspecialchars($pro_code,ENT_QUOTES,'UTF-8');
         $pro_name =htmlspecialchars($pro_name,ENT_QUOTES,'UTF-8');
         $pro_price =htmlspecialchars($pro_price,ENT_QUOTES,'UTF-8');
+        $pro_gazou_name_old =htmlspecialchars($pro_gazou_name_old,ENT_QUOTES,'UTF-8');
+        $pro_gazou_name =htmlspecialchars($pro_gazou_name,ENT_QUOTES,'UTF-8');
         
        $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
@@ -23,16 +25,24 @@
        $dbh = new PDO($dsn, $user, $price);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='UPDATE mst_product SET name=?,price=? WHERE code=?';
+       $sql ='UPDATE mst_product SET name=?,price=?,gazou=? WHERE code=?';
        $stmt = $dbh->prepare($sql);
        $data[] = $pro_name;
        $data[] = $pro_price;
+       $data[] = $pro_gazou_name;
        $data[] = $pro_code;
        $stmt->execute($data);
 
        $dbh = null;
 
        print $pro_name;
+
+       if($pro_gazou_name_old != $pro_gazou_name){
+    if($pro_gazou_name_old!='')
+    {
+       unlink('./gazou/'.$pro_gazou_name_old);
+    }
+}
        print'修正しました。<br />';
         }       
     catch(Exception $e) {
