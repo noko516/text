@@ -26,7 +26,7 @@
 
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
         $pro_name=$rec['name'];
-        $pro_gazou_name_old=$rec['gazou'];
+        $pro_gazou_name=$rec['gazou'];
         $dbh = null;
 
         if($pro_gazou_name=='')
