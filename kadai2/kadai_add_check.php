@@ -48,7 +48,7 @@
 
         if($kadai_gazou['size']>0)
         {
-             if($kadai_gazou['size']>100000)
+             if($kadai_gazou['size']>1000000)
              {
               print'画像が大きすぎます';
              }
