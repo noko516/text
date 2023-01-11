@@ -19,10 +19,10 @@
 
        $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
-       $dbh = new PDO($dsn, $id, $title, $description, $file);
+       $dbh = new PDO($dsn,$user,"");
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='INSERT INTO mst_staff(id,title,description,file) VALUES(?,?)';
+       $sql ='INSERT INTO image(title,description,file) VALUES(?,?,?)';
        $stmt = $dbh->prepare($sql);
        $data[] = $kadai_name;
        $data[] = $kadai_name2;

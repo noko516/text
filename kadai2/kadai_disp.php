@@ -15,18 +15,18 @@
   
         $dsn='mysql:dbname=shop;host=localhost;cherset=utf8';
         $user='root';
-        $dbh=new PDO($dsn, $id, $title, $description, $file);
+        $dbh=new PDO($dsn, $user,"" );
         $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-        $sql='SELECT name,name2,gazou FROM image WHERE code =?';
+        $sql='SELECT title,description,file FROM image WHERE id =?';
         $stmt=$dbh->prepare($sql);
         $data[]=$kadai_code;
         $stmt->execute($data);
 
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-        $kadai_name=$rec['name'];
-        $kadai_name2=$rec['name2'];
-        $kadai_gazou_name=$rec['gazou'];
+        $kadai_name=$rec['title'];
+        $kadai_name2=$rec['description'];
+        $kadai_gazou_name=$rec['file'];
         $dbh = null;
 
         if($kadai_gazou_name=="")
@@ -34,12 +34,13 @@
             $disp_gazou='';
         }else
         {
-            $disp_gazou='<img src="./gazou/'.$kadai_gazou_name.'">';
+            $disp_gazou='<img src="./image/'.$kadai_gazou_name.'">';
         }
     }
     catch(Exception $e)
     {
     print'ただいま障害により大変ご迷惑をお掛けしています。';
+    print $e->getMessage();
     exit();
     }
     ?>

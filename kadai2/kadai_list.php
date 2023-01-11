@@ -10,10 +10,10 @@
        try{
         $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
-       $dbh = new PDO($dsn, $id, $title, $description, $file);
+       $dbh = new PDO($dsn,$user,"");
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
        
-       $sql = 'SELECT code,name FROM image WHERE 1';
+       $sql = 'SELECT id,title,description,file FROM image WHERE 1';
        $stmt = $dbh->prepare($sql);
        $stmt->execute();
 
@@ -21,15 +21,15 @@
        
        print 'キャラクター一覧<br /><br />';
 
-       print '<form method="post"action="staff_branch.php">';
+       print '<form method="post"action="kadai_branch.php">';
        while(true)
        {
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
         if($rec==false){
               break;
         }
-        print '<input type="radio"name="staffcode"value="'.$rec['code'].'">';
-        print $rec['name'];
+        print '<input type="radio"name="kadaicode"value="'.$rec['id'].'">';
+        print $rec['title'];
         print'<br />';
        }
        print '<input type="submit" name="disp" value="参照">';
@@ -39,6 +39,7 @@
        }
        catch(Exception $e){
          print 'ただいま障害により大変ご迷惑をお掛けしております。';
+         print $e->getMessage();
          exit();
        }
        ?> 
