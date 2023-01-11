@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ろくまる農園</title>
+        <title>キャラクター</title>
     </head>
     <body>
         
@@ -11,21 +11,21 @@
     try
     {
 
-        $staff_code=$_GET['staffcode'];
+        $kadai_code=$_GET['kadaicode'];
   
         $dsn='mysql:dbname=shop;host=localhost;cherset=utf8';
         $user='root';
         $password ='';
-        $dbh=new PDO($dsn, $user, $password);
+        $dbh=new PDO($dsn, $id, $title, $description, $file);
         $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-        $sql='SELECT name FROM mst_staff WHERE code =?';
+        $sql='SELECT name name2 gazou FROM image WHERE code =?';
         $stmt=$dbh->prepare($sql);
-        $data[]=$staff_code;
+        $data[]=$kadai_code;
         $stmt->execute($data);
 
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-        $staff_name=$rec['name'];
+        $kadai_name=$rec['name'];
         $dbh = null;
     }
     catch(Exception $e)
@@ -35,18 +35,18 @@
     }
     ?>
 
-    スタッフ削除<br />
+    キャラクター削除<br />
     <br/>
-    スタッフコード<br/>
-    <?php print $staff_code;?>
+    キャラクターコード<br/>
+    <?php print $kadai_code;?>
     <br/>
-    スタッフ名<br/>
-    <?php print $staff_name;?>
+    キャラクター名<br/>
+    <?php print $kadai_name;?>
     <br/>
-    このスタッフを削除してもよろしいですか？<br/>
+    このキャラクターを削除してもよろしいですか？<br/>
     <br/>
     <form method="post"action="staff_delete_done.php">
-    <input type="hidden" name="code" value="<?php print $staff_code;?>">
+    <input type="hidden" name="code" value="<?php print $kadai_code;?>">
    
     <input type="button" onclick="history.back()" value="戻る">
     <input type="submit"  value="OK">

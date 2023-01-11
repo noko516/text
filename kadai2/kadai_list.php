@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ろくまる農園</title>
+        <title>キャラクター</title>
     </head>
     <body>
        <?php 
@@ -10,17 +10,16 @@
        try{
         $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
-       $password = '';
-       $dbh = new PDO($dsn, $user, $password);
+       $dbh = new PDO($dsn, $id, $title, $description, $file);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
        
-       $sql = 'SELECT code,name FROM mst_staff WHERE 1';
+       $sql = 'SELECT code,name FROM image WHERE 1';
        $stmt = $dbh->prepare($sql);
        $stmt->execute();
 
        $dbh = null;
        
-       print 'スタッフ一覧<br /><br />';
+       print 'キャラクター一覧<br /><br />';
 
        print '<form method="post"action="staff_branch.php">';
        while(true)
@@ -35,7 +34,6 @@
        }
        print '<input type="submit" name="disp" value="参照">';
        print '<input type="submit" name="add" value="追加">';
-       print '<input type="submit" name="edit" value="修正">';
        print '<input type="submit" name="delete" value="削除">';
        print '</from>';
        }

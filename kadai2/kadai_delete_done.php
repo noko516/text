@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ろくまる農園</title>
+        <title>キャラクター</title>
     </head>
     <body>
        <?php     
@@ -17,7 +17,7 @@
        $dbh = new PDO($dsn, $user, $password);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='DELETE FROM mst_staff WHERE code=?';
+       $sql ='DELETE FROM image WHERE code=?';
        $stmt = $dbh->prepare($sql);
 
        $data[] = $staff_code;

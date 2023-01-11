@@ -11,7 +11,7 @@
         画像のタイトル<br />
         <input type="text" name="name"  style="width:200px"><br />
         画像の説明<br />
-        <input type="text"name="zyusyo" style="width:200px"><br />
+        <textarea name="name2" cols="50" rows="5"></textarea><br />
         <br />
         画像ファイルの選択<br />
         <input type="file" name="gazou" style="width:400px"><br />

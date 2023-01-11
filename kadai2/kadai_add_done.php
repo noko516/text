@@ -2,35 +2,37 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ろくまる農園</title>
+        <title>キャラクター</title>
     </head>
     <body>
        <?php     
         try
         {
 
-        $staff_name = $_POST['name'];
-        $staff_pass = $_POST['pass'];
+        $kadai_name = $_POST['name'];
+        $kadai_name2 = $_POST['name2'];
+        $kadai_gazou_name = $_POST['gazou_name'];
 
-        $staff_name =htmlspecialchars($staff_name,ENT_QUOTES,'UTF-8');
-        $staff_pass =htmlspecialchars($staff_pass,ENT_QUOTES,'UTF-8');
-        
+        $kadai_name =htmlspecialchars($kadai_name,ENT_QUOTES,'UTF-8');
+        $kadai_name2 =htmlspecialchars($kadai_name2,ENT_QUOTES,'UTF-8');
+        $kadai_gazou_name =htmlspecialchars($kadai_gazou_name,ENT_QUOTES,'UTF-8');
+
        $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
-       $password = '';
-       $dbh = new PDO($dsn, $user, $password);
+       $dbh = new PDO($dsn, $id, $title, $description, $file);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='INSERT INTO mst_staff(name,password) VALUES(?,?)';
+       $sql ='INSERT INTO mst_staff(id,title,description,file) VALUES(?,?)';
        $stmt = $dbh->prepare($sql);
-       $data[] = $staff_name;
-       $data[] = $staff_pass;
+       $data[] = $kadai_name;
+       $data[] = $kadai_name2;
+       $data[] = $kadai_gazou_name;
        $stmt->execute($data);
 
        $dbh = null;
 
-       print $staff_name;
-       print'さんを追加しました。<br />';
+       print $kadai_name;
+       print'を追加しました。<br />';
         }       
     catch(Exception $e) {
           print 'ただいま障害により大変ご迷惑をお掛けしております。';
@@ -39,6 +41,6 @@
     }   
       ?>  
 
-      <a href ="staff_list.php">戻る</a>
+      <a href ="kadai_list.php">戻る</a>
     </body>
 </html>
