@@ -22,13 +22,15 @@
         $stmt=$dbh->prepare($sql);
         $data[]=$kadai_code;
         $stmt->execute($data);
-
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+ 
         $kadai_name=$rec['title'];
         $kadai_name2=$rec['description'];
         $kadai_gazou_name=$rec['file'];
-        $dbh = null;
+        
 
+        $dbh = null;
+    
         if($kadai_gazou_name=="")
         {
             $disp_gazou='';

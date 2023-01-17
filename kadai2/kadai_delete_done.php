@@ -9,23 +9,29 @@
         try
         {
 
-        $staff_code = $_POST['code'];
-        
+        $kadai_code = $_POST['kadaicode'];
+        $kadai_gazou_name = $_POST['gazou_name'];;
+
        $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
        $user = 'root';
        $password = '';
        $dbh = new PDO($dsn, $user, $password);
        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-       $sql ='DELETE FROM image WHERE code=?';
+       $sql ='DELETE FROM image WHERE id=?';
        $stmt = $dbh->prepare($sql);
 
-       $data[] = $staff_code;
+       $data[] = $kadai_code;
        $stmt->execute($data);
 
        $dbh = null;
 
+       if($kadai_gazou_name!='')
+       {
+          unlink('./image/'.$kadai_gazou_name);
+       }
      }
+  
     catch(Exception $e) {
           print 'ただいま障害により大変ご迷惑をお掛けしております。';
           print $e->getMessage();

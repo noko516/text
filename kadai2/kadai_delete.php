@@ -25,7 +25,16 @@
 
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
         $kadai_name=$rec['title'];
+        $kadai_gazou_name=$rec['file'];
         $dbh = null;
+        if($kadai_gazou_name=='')
+        {
+           $disp_gazou='';
+        }
+        else
+        {
+           $disp_gazou='<img src ="./image/'.$kadai_gazou_name.'">';
+        }
     }
     catch(Exception $e)
     {
@@ -46,7 +55,8 @@
     このキャラクターを削除してもよろしいですか？<br/>
     <br/>
     <form method="post"action="kadai_delete_done.php">
-    <input type="hidden" name="code" value="<?php print $kadai_code;?>">
+    <input type="hidden" name="kadaicode" value="<?php print $kadai_code;?>">
+    <input type="hidden" name="gazou_name" value="<?php print $kadai_gazou_name;?>">
    
     <input type="button" onclick="history.back()" value="戻る">
     <input type="submit"  value="OK">

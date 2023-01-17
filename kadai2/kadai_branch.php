@@ -7,7 +7,7 @@ if(isset($_POST['kadaicode'])==false)
     header('Location:kadai_ng.php');
     exit();
    }
-   $staff_code=$_POST['kadaicode'];
+   $kadai_code=$_POST['kadaicode'];
    header('Location:kadai_disp.php?kadaicode='.$kadai_code);
    exit();
 }
@@ -32,7 +32,7 @@ if(isset($_POST['delete'])==true)
         header('Location:kadai_ng.php');
         exit();
     }
-    $staff_code=$_POST['kadaicode'];
+    $kadai_code=$_POST['kadaicode'];
     header('Location:kadai_delete.php?kadaicode='.$kadai_code);
     exit();
 }
