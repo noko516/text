@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>キャラクター</title>
+        <link href="kadai_list.css" rel="stylesheet" type="text/css">
     </head>
     <body>
        <?php 
@@ -19,18 +20,30 @@
 
        $dbh = null;
        
+       echo "<p>";
        print 'キャラクター一覧<br /><br />';
+       echo "</p>";
 
        print '<form method="post"action="kadai_branch.php">';
+       echo "<table class='hyou'>";
+       echo "<tbody>";
+       echo "<tr>";
+       echo "<th></th>";
+       echo "<th>ID</th>";
+       echo "<th>名前</th>";
+       echo "<th>画像</th>";
+       echo "</tr>";
        while(true)
        {
         $rec=$stmt->fetch(PDO::FETCH_ASSOC);
         if($rec==false){
               break;
         }
-        print '<input type="radio"name="kadaicode"value="'.$rec['id'].'">';
-        print $rec['title'];
+        echo "<tr>";
+        print '<td><input type="radio"name="kadaicode"value="'.$rec['id'].'"></td>';
+        print "<td>".$rec['title']."</td>";
         print'<br />';
+        echo "<tr>";
        }
        print '<input type="submit" name="disp" value="参照">';
        print '<input type="submit" name="add" value="追加">';

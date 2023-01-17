@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>キャラクター</title>
+        <link href="kadai_add.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        登録画面<br />
+    <p>登録画面</p><br />
         <br />
         <form method="post" action="kadai_add_check.php"enctype="multipart/form-data">
         画像のタイトル<br />

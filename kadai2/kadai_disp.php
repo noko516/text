@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>キャラクター</title>
+        <link href="kadai_disp.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         
@@ -47,7 +48,7 @@
     }
     ?>
 
-    キャラクター参照<br />
+   <p>キャラクター参照</p><br />
     <br/>
     キャラクターコード<br/>
     <?php print $kadai_code;?>
