@@ -28,7 +28,6 @@
        echo "<table class='hyou'>";
        echo "<tbody>";
        echo "<tr>";
-       echo "<th></th>";
        echo "<th>ID</th>";
        echo "<th>名前</th>";
        echo "<th>画像</th>";
@@ -39,9 +38,14 @@
         if($rec==false){
               break;
         }
+        $kadai_gazou_name=$rec['file'];
+        $disp_gazou='<img src="./image/'.$kadai_gazou_name.'">';
         echo "<tr>";
         print '<td><input type="radio"name="kadaicode"value="'.$rec['id'].'"></td>';
         print "<td>".$rec['title']."</td>";
+        echo "<p class=sample>";
+        print "<td>".$disp_gazou."</td>";
+        echo "</p>";
         print'<br />';
         echo "<tr>";
        }

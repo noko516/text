@@ -52,6 +52,8 @@
     キャラクター名<br/>
     <?php print $kadai_name;?>
     <br/>
+    <?php print $disp_gazou;?>
+    <br/>
     このキャラクターを削除してもよろしいですか？<br/>
     <br/>
     <form method="post"action="kadai_delete_done.php">

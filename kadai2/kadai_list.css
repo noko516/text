@@ -6,9 +6,10 @@ body {
     }
 
     p{
-        background-color: #00552e;
-        color: #ffffff;
-    }
+      text-align: center;
+      background-color: #00552e;
+      color: #ffffff;
+  }
    
     .hyou {
         width: 100%;
@@ -21,9 +22,14 @@ body {
         background: #e9faf9;
         border: solid 1px 
        }
+
          td {
         padding: 10px;
-        border: solid 1px 
+        border: solid 1px;
        }
+       .sample {
+        width: auto;
+        height: 50px;
+        }
     
 

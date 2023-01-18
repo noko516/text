@@ -6,6 +6,7 @@ body {
     }
 
     p{
+        text-align: center;
         background-color: #00552e;
         color: #ffffff;
     }
