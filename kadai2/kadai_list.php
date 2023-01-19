@@ -42,10 +42,8 @@
         $disp_gazou='<img src="./image/'.$kadai_gazou_name.'">';
         echo "<tr>";
         print '<td><input type="radio"name="kadaicode"value="'.$rec['id'].'"></td>';
-        print "<td>".$rec['title']."</td>";
-        echo "<p class=sample>";
+        print "<td>".$rec['title']."</td>";   
         print "<td>".$disp_gazou."</td>";
-        echo "</p>";
         print'<br />';
         echo "<tr>";
        }
