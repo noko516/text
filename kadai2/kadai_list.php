@@ -40,7 +40,7 @@
         }
         
         $kadai_gazou_name=$rec['file'];
-        $disp_gazou='<i><img src="./image/'.$kadai_gazou_name.'"></i>';
+        $disp_gazou='<img src="./image/'.$kadai_gazou_name.'">';
         echo "<tr>";
         print '<td><input type="radio"name="kadaicode"value="'.$rec['id'].'">';
         print "<td>".$rec['title']."</td>";   

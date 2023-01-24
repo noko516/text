@@ -6,17 +6,19 @@ body {
     }
 
     p{
-      padding: 1rem 2rem;
+      margin-top: 0;
+      padding: 0;
       text-align: center;
-      font-size: 100px;
+      font-size: 50px;
       background-color: #00552e;
       color: #ffffff;
   }
 
   
-  i{
-      height: 50px;
-  }
+   img{
+     width: 150px;
+     height: auto;
+     }
    
     .hyou {
         width: 100%;

@@ -27,10 +27,8 @@
         {
             echo "<table class='hyou'>";
             echo "<tbody>";
-            echo "</tr>";
-            print'<th>キャラクター名：</th>';
-            echo "</tr>";
             echo "<tr>";
+            print'<th>キャラクター名：</th>';
             print "<td>".$kadai_name."</td>";
             echo "</tr>";
             print'<br />';
@@ -44,8 +42,6 @@
         else
         {   echo "</tr>";
             print'<th>画像の説明：</th>';
-            echo "</tr>";
-            echo "</tr>";
             print "<td>".$kadai_name2."</td>";
             echo "</tr>";
             print'<br />';
@@ -68,9 +64,8 @@
              else
              {
                  move_uploaded_file($kadai_gazou['tmp_name'],'./image/'.$kadai_gazou['name']);
-                 echo "</tr>";
-                 echo "</tr>";
-                 echo "</tr>";
+                 echo "<tr>";
+                 echo "<th></th>";
                  print'<td><img src="./image/'.$kadai_gazou['name'].'"></td>';
                  echo "</tr>";
                  echo "</tbody>";
