@@ -38,20 +38,27 @@
         if($rec==false){
               break;
         }
+        
         $kadai_gazou_name=$rec['file'];
-        $disp_gazou='<img src="./image/'.$kadai_gazou_name.'">';
+        $disp_gazou='<i><img src="./image/'.$kadai_gazou_name.'"></i>';
         echo "<tr>";
-        print '<td><input type="radio"name="kadaicode"value="'.$rec['id'].'"></td>';
+        print '<td><input type="radio"name="kadaicode"value="'.$rec['id'].'">';
         print "<td>".$rec['title']."</td>";   
         print "<td>".$disp_gazou."</td>";
         print'<br />';
-        echo "<tr>";
+        echo "</tr>";
+
        }
+       echo "</tbody>";
+       echo "</table>";
        print '<input type="submit" name="disp" value="参照">';
        print '<input type="submit" name="add" value="追加">';
        print '<input type="submit" name="delete" value="削除">';
        print '</from>';
        }
+
+ 
+
        catch(Exception $e){
          print 'ただいま障害により大変ご迷惑をお掛けしております。';
          print $e->getMessage();

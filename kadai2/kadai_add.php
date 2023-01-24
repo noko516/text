@@ -9,14 +9,21 @@
     <p>登録画面</p><br />
         <br />
         <form method="post" action="kadai_add_check.php"enctype="multipart/form-data">
-        画像のタイトル<br />
-        <input type="text" name="name"  style="width:200px"><br />
-        画像の説明<br />
-        <textarea name="name2" cols="50" rows="5"></textarea><br />
-        <br />
-        画像ファイルの選択<br />
-        <input type="file" name="gazou" style="width:400px"><br />
-        <br />
+        <table class='hyou'>
+            <tr>
+        <tbody>
+        <th>画像のタイトル</th>
+        <td><input type="text" name="name"  style="width:200px"></td>
+        <tr><br /></tr>
+        <th>画像の説明</th><br />
+        <td><textarea name="name2" cols="50" rows="5"></textarea></td><br />
+        <tr><br /><tr>
+        <th>画像ファイルの選択</th><br />
+        <td><input type="file" name="gazou" style="width:400px"></td><br />
+        <tr><br /></tr>
+        </tr>
+         </tbody>
+        </table>
         <button type="button" onclick="history.back()">戻る</button>
         <button type="submit">OK</button>
     </form>

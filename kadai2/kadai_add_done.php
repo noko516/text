@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>キャラクター</title>
+        <link href="kadai_list.css" rel="stylesheet" type="text/css">
     </head>
     <body>
        <?php     

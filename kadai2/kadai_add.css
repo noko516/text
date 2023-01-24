@@ -5,8 +5,26 @@ body {
     background-color: #e0ffff;
     }
 
+    .hyou {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        border-spacing: 0;
+       }
+         th {
+        padding: 10px;
+        background: #e9faf9;
+        border: solid 1px 
+       }
+
+         td {
+        padding: 10px;
+        border: solid 1px;
+       }
+       
     p{
         text-align: center;
         background-color: #00552e;
         color: #ffffff;
     }
+

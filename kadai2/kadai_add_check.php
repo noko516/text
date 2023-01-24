@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <title>キャラクター</title>
+         <link href="kadai_list.css" rel="stylesheet" type="text/css">
     </head>
     <body>
 
@@ -24,8 +25,14 @@
         }
         else
         {
-            print'キャラクター名：';
-            print $kadai_name;
+            echo "<table class='hyou'>";
+            echo "<tbody>";
+            echo "</tr>";
+            print'<th>キャラクター名：</th>';
+            echo "</tr>";
+            echo "<tr>";
+            print "<td>".$kadai_name."</td>";
+            echo "</tr>";
             print'<br />';
         }
 
@@ -35,9 +42,12 @@
             $err[] ='説明が入力されてません<br />';
         }
         else
-        {
-            print'画像の説明：';
-            print $kadai_name2;
+        {   echo "</tr>";
+            print'<th>画像の説明：</th>';
+            echo "</tr>";
+            echo "</tr>";
+            print "<td>".$kadai_name2."</td>";
+            echo "</tr>";
             print'<br />';
         }
 
@@ -58,10 +68,17 @@
              else
              {
                  move_uploaded_file($kadai_gazou['tmp_name'],'./image/'.$kadai_gazou['name']);
-                 print'<img src="./image/'.$kadai_gazou['name'].'">';
+                 echo "</tr>";
+                 echo "</tr>";
+                 echo "</tr>";
+                 print'<td><img src="./image/'.$kadai_gazou['name'].'"></td>';
+                 echo "</tr>";
+                 echo "</tbody>";
+                 echo "</table>";
                  print '<br />';
              }
         }
+
 
         if($kadai_name==''||$kadai_name==''||$kadai_gazou=='')
        {
@@ -72,7 +89,7 @@
        else
        {
         print'<form method="post"action="kadai_add_done.php">';
-        print'<input type="hidden" name="name" value="' .$kadai_name.'">';
+        print '<input type="hidden" name="name" value="' .$kadai_name.'">';
         print'<input type="hidden" name="name2" value="'.$kadai_name2.'">';
         print'<input type="hidden" name="gazou_name" value="' .$kadai_gazou['name'].'">';
         print '<br />';

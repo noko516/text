@@ -5,18 +5,6 @@ body {
     background-color: #e0ffff;
     }
 
-    p{
-      padding: 1rem 2rem;
-      text-align: center;
-      font-size: 100px;
-      background-color: #00552e;
-      color: #ffffff;
-  }
-
-  
-  i{
-      height: 50px;
-  }
    
     .hyou {
         width: 100%;
@@ -34,4 +22,3 @@ body {
         padding: 10px;
         border: solid 1px;
        }
-
