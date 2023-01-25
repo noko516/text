@@ -8,6 +8,10 @@
          <link href="kadai_list.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <header>
+    <p>画像の登録画面</p>
+       </header><br />
+        <br />
 
         <?php 
         
@@ -72,8 +76,11 @@
                  echo "</table>";
                  print '<br />';
              }
+             
         }
 
+        print "この画像を保存しますか？";
+       
 
         if($kadai_name==''||$kadai_name==''||$kadai_gazou=='')
        {

@@ -6,7 +6,9 @@
         <link href="kadai_add.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-    <p>登録画面</p><br />
+        <header>
+    <p>画像の登録</p>
+        </header><br />
         <br />
         <form method="post" action="kadai_add_check.php"enctype="multipart/form-data">
         <table class='hyou'>

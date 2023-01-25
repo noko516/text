@@ -48,7 +48,9 @@
     }
     ?>
 
-   <p>キャラクター参照</p><br />
+   <header>
+   <p>キャラクター参照</p>
+   </header><br />
     <br/>
     キャラクターコード<br/>
     <?php print $kadai_code;?>

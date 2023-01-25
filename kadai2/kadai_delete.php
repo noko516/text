@@ -45,7 +45,9 @@
     }
     ?>
 
-    <p>画像の削除確認</p><br />
+    <header>
+    <p>画像の削除確認</p>
+    </header><br />
     <br/>
     キャラクターコード<br/>
     <?php print $kadai_code;?>

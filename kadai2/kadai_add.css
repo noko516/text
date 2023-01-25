@@ -5,6 +5,20 @@ body {
     background-color: #e0ffff;
     }
 
+
+    header{
+      background-color: #00552e;
+      height: 60x;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+
+       p{
+        text-align: center;
+        font-size: 40px;
+        color: #ffffff;
+    }
+  
     .hyou {
         width: 100%;
         text-align: center;
@@ -21,11 +35,4 @@ body {
         border: solid 1px;
        }
        
-    p{
-        margin-top: 0;
-        text-align: center;
-        font-size: 50px;
-        background-color: #00552e;
-        color: #ffffff;
-    }
-
+       

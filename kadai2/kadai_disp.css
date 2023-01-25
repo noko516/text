@@ -4,10 +4,16 @@ body {
     background-color: #e0ffff;
     }
 
-    p{
-        margin-top: 0;
-        text-align: center;
-        font-size: 50px;
+    header{
         background-color: #00552e;
-        color: #ffffff;
-    }
+        height: 60x;
+        padding-top: 15px;
+        padding-bottom: 10px;
+      }
+  
+         p{
+          text-align: center;
+          font-size: 40px;
+          color: #ffffff;
+      }
+    

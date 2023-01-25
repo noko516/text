@@ -20,9 +20,11 @@
 
        $dbh = null;
        
+       echo "<header>";
        echo "<p>";
        print 'キャラクター一覧<br /><br />';
        echo "</p>";
+       echo "</header>";
 
        print '<form method="post"action="kadai_branch.php">';
        echo "<table class='hyou'>";
