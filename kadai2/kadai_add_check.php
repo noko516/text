@@ -90,7 +90,6 @@
        }
        else
        {
-        header("location:success.php?mess=登録が完了しました");
         print'<form method="post"action="kadai_add_done.php">';
         print '<input type="hidden" name="name" value="' .$kadai_name.'">';
         print'<input type="hidden" name="name2" value="'.$kadai_name2.'">';
