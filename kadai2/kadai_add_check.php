@@ -52,7 +52,7 @@
         }
 
 
-        $err= [];
+       
         if($kadai_gazou=='')
         {
             print '画像が選択されてません<br />';
