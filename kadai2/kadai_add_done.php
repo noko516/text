@@ -1,3 +1,8 @@
+<?php
+if (count($err) > 0) {
+    $errMessage = implode("<>",$err);header("location:kadai_add_check.php?error={$errMessage}");
+} ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +18,7 @@
         $kadai_name = $_POST['name'];
         $kadai_name2 = $_POST['name2'];
         $kadai_gazou_name = $_POST['gazou_name'];
+        $message = $_GET["mess"];print $message;
 
         $kadai_name =htmlspecialchars($kadai_name,ENT_QUOTES,'UTF-8');
         $kadai_name2 =htmlspecialchars($kadai_name2,ENT_QUOTES,'UTF-8');

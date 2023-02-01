@@ -22,10 +22,10 @@
         $kadai_name= htmlspecialchars($kadai_name,ENT_QUOTES,'UTF-8');
         $kadai_name2= htmlspecialchars($kadai_name2,ENT_QUOTES,'UTF-8');
        
-        
+        $err= [];
         if($kadai_name=='')
         {
-            print 'キャラクター名が入力されてません<br />';
+            $err[] ='キャラクター名が入力されてません<br />';
         }
         else
         {
@@ -38,10 +38,10 @@
             print'<br />';
         }
 
-       
+        $err= [];
         if($kadai_name2=='')
         {
-            print '説明が入力されてません<br />';
+            $err[] ='説明が入力されてません<br />';
         }
         else
         {   echo "</tr>";
@@ -52,18 +52,18 @@
         }
 
 
-       
+        $err= [];
         if($kadai_gazou=='')
         {
-            print '画像が選択されてません<br />';
+            $err[] ='画像が選択されてません<br />';
         }
 
         if($kadai_gazou['size']>0)
         {
-            
+            $err= [];
              if($kadai_gazou['size']>1000000)
              {
-                print '画像が大きすぎます';
+                $err[] ='画像が大きすぎます';
              }
              else
              {
@@ -90,6 +90,7 @@
        }
        else
        {
+        header("location:success.php?mess=登録が完了しました");
         print'<form method="post"action="kadai_add_done.php">';
         print '<input type="hidden" name="name" value="' .$kadai_name.'">';
         print'<input type="hidden" name="name2" value="'.$kadai_name2.'">';
