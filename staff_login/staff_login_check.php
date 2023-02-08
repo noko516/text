@@ -16,7 +16,7 @@
         $staff_code= htmlspecialchars($staff_code,ENT_QUOTES,'UTF-8');
         $staff_pass= htmlspecialchars($staff_pass,ENT_QUOTES,'UTF-8');
        
-        $staff_passmd5($staff_pass);
+        $staff_pass=md5($staff_pass);
         $dsn = 'mysql:dbname=shop;host=localhost;cherset=utf8';
         $user = 'root';
         $password = '';
@@ -29,23 +29,29 @@
         $data[] = $staff_code;
         $data[] = $staff_pass;
         $stmt->execute($data);
- 
         $dbh = null;
-        
         $rec = $stmt-> fetch(PDO::FETCH_ASSOC);
 
         if($rec==false)
        {
+
         print'スタッフコードかパスワードが間違っています';
         print'<a href="staff_login.html">戻る</a>';
        }
        else
        {
-       
+       session_start();
+       $_SESSION["login"] = 1;
+       $_SESSION["staff_code"] = $staff_code;
+       $_SESSION["staff_name"] = $rec['name'];
+       header('Location: staff_top.php');
+       exit();
     }
-    catch()
+}
+    catch(Exception $e)
     {
-
+       print'ただいま障害により大変ご迷惑をお掛けしております。';
+       exit();
     }
         
        ?>
